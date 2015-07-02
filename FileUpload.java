@@ -20,7 +20,7 @@ public class FileUpload {
 			client.createBucket(bucketName); //create a new bucket
 			System.out.println("Uploading text file into specified bucket......");
 			File fin = new File(uploadFileName);
-			client.putObject(bucketName, keyName, fin); //put the specified text file into the new bucket
+			client.putObject(bucketName, keyName, fin); //put the specified text file into the bucket
 		} catch(AmazonServiceException ase) {
 			System.out.println("There was an error somewhere with the service..."); //need to add better error checking
 		}
